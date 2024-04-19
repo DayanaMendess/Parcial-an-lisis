@@ -1,0 +1,19 @@
+@startuml
+
+class Galpon{
+    - int : id
+    - String : codigo
+    - String : ubicacion
+    - String : capacidad
+    - String : estado 
+}
+
+class Cultivo{
+    - int : id
+    - int : cantidad
+    - Date : fecha
+    - Galpon : galpon_id
+}
+
+Galpon "1" -- "*" Cultivo : contiene
+@enduml
